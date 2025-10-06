@@ -1,142 +1,147 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Código da Renda</title>
   <style>
-    :root {
-      --bg: #071824;
-      --card: #0b2535;
-      --accent: #00c4b3;
-      --muted: #b3c2cc;
-      --text: #e9fbff;
-      --button-bg: #00c4b3;
-      --button-hover: #00a090;
-    }
-
     body {
+      font-family: 'Inter', sans-serif;
       margin: 0;
-      font-family: "Poppins", sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      text-align: center;
-    }
-
-    header {
-      padding: 40px 20px;
-    }
-
-    h1 {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--text);
-    }
-
-    h2 {
-      font-size: 1.5rem;
-      margin-top: 60px;
-      color: var(--accent);
-    }
-
-    p {
-      color: var(--muted);
-      max-width: 800px;
-      margin: 10px auto 20px;
+      background-color: #06161f;
+      color: #e2e8f0;
       line-height: 1.6;
     }
 
-    .btn {
-      display: inline-block;
-      background-color: var(--button-bg);
-      color: #fff;
-      padding: 12px 28px;
-      border-radius: 30px;
-      text-decoration: none;
+    header {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+    }
+
+    header img.logo {
+      width: 160px;
+      margin-bottom: 1rem;
+    }
+
+    header h1 {
+      color: #00c0a3;
+      font-size: 1.5rem;
+    }
+
+    header h2 {
+      font-size: 1.2rem;
       font-weight: 600;
-      transition: background 0.3s;
-      margin: 10px 5px;
+      margin-top: 0.5rem;
+      color: #ffffff;
     }
 
-    .btn:hover {
-      background-color: var(--button-hover);
+    header p {
+      color: #94a3b8;
+      max-width: 600px;
+      margin: 0.5rem auto 1.5rem;
     }
 
-    .grid {
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+
+    .buttons a {
+      background-color: #00c0a3;
+      color: #fff;
+      text-decoration: none;
+      padding: 0.7rem 1.5rem;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .buttons a:hover {
+      background-color: #009c84;
+    }
+
+    .hero-images {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 15px;
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 0 10px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 0 1rem;
+      justify-items: center;
     }
 
-    .grid img {
+    .hero-images img {
       width: 100%;
-      border-radius: 15px;
+      border-radius: 12px;
+      object-fit: cover;
     }
 
-    .invests img {
-      width: 90%;
-      max-width: 900px;
-      border-radius: 15px;
-      margin-top: 20px;
+    section {
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    section h3 {
+      color: #00c0a3;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .investment-section img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+    }
+
+    .investment-section p {
+      text-align: left;
+      max-width: 700px;
+      margin: 0.5rem auto;
+      color: #cbd5e1;
     }
 
     footer {
-      margin-top: 60px;
-      padding: 20px;
-      color: var(--muted);
+      text-align: center;
+      padding: 2rem 1rem;
       font-size: 0.9rem;
-    }
-
-    ol {
-      text-align: left;
-      max-width: 800px;
-      margin: 20px auto;
-      color: var(--muted);
-      line-height: 1.8;
-    }
-
-    ol li strong {
-      color: var(--accent);
+      color: #64748b;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h2 style="color:var(--accent)">Conquiste sua liberdade</h2>
-    <h1>Transforme conhecimento em renda com investimentos inteligentes</h1>
+    <img src="https://raw.githubusercontent.com/zellerdias/codigo-da-renda/main/logo.png" alt="Código da Renda" class="logo" />
+    <h1>Conquiste sua liberdade</h1>
+    <h2>Transforme conhecimento em renda com investimentos inteligentes</h2>
     <p>Aprenda estratégias práticas de investimento para quem está começando — com segurança e disciplina.</p>
-    <a href="#formas" class="btn">Ver 5 Formas</a>
-    <a href="#" class="btn">Quero Começar Hoje</a>
-
-    <div class="grid">
-      <img src="https://images.unsplash.com/photo-1569025690938-a00729c9e1aa?auto=format&fit=crop&w=800&q=80" alt="crescimento composto" />
-      <img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?auto=format&fit=crop&w=800&q=80" alt="investimentos alinhados" />
-      <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" alt="disciplina e método" />
+    <div class="buttons">
+      <a href="#formas">Ver 5 Formas</a>
+      <a href="#inicio">Quero Começar Hoje</a>
     </div>
   </header>
 
-  <section id="formas" class="invests">
-    <h2>5 Formas Reais de Começar a Investir</h2>
-    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80" alt="investimento e planejamento">
+  <div class="hero-images">
+    <img src="https://images.unsplash.com/photo-1649956535075-8e35aefddd24?auto=format&fit=crop&w=800&q=80" alt="Crescimento Financeiro" />
+    <img src="https://images.unsplash.com/photo-1508385082359-f38ae991e8f0?auto=format&fit=crop&w=800&q=80" alt="Investimento Online" />
+    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="Planejamento Financeiro" />
+  </div>
 
-    <ol>
-      <li><strong>Tesouro Direto:</strong> uma forma simples e segura de investir em títulos públicos do governo. Ideal para iniciantes que querem previsibilidade.</li>
-      <li><strong>Fundos Imobiliários (FIIs):</strong> receba rendimentos mensais ligados a imóveis sem precisar comprar um imóvel físico.</li>
-      <li><strong>Ações:</strong> torne-se sócio de grandes empresas e aproveite o potencial de valorização e dividendos no longo prazo.</li>
-      <li><strong>Renda Fixa Privada:</strong> invista em CDBs, LCIs e LCAs com rentabilidade superior à poupança.</li>
-      <li><strong>Fundos de Investimento:</strong> deixe profissionais cuidarem da sua carteira e diversifique com praticidade.</li>
-    </ol>
-
-    <a href="#" class="btn">Começar Agora</a>
+  <section class="investment-section" id="formas">
+    <h3>5 Formas Reais de Começar a Investir</h3>
+    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80" alt="Investimentos Reais" />
+    <p><strong>1. Tesouro Direto:</strong> uma forma simples e segura de investir em títulos públicos do governo, ideal para iniciantes.</p>
+    <p><strong>2. Fundos Imobiliários (FIIs):</strong> receba rendimentos mensais ligados a imóveis sem precisar comprar um imóvel físico.</p>
+    <p><strong>3. Ações de Dividendos:</strong> invista em empresas sólidas que pagam parte dos lucros aos acionistas — renda passiva.</p>
+    <p><strong>4. ETFs (Fundos de Índice):</strong> diversifique seu portfólio com baixo custo e acompanhe o desempenho de índices do mercado.</p>
+    <p><strong>5. Previdência Privada:</strong> planeje o futuro com aportes constantes e benefícios fiscais a longo prazo.</p>
+    <div class="buttons" style="margin-top: 2rem;">
+      <a href="#inicio">Quero Começar Agora</a>
+    </div>
   </section>
 
   <footer>
     © Código da Renda — 2025
   </footer>
-
 </body>
 </html>
