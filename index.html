@@ -1,170 +1,188 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Código da Renda — Conquiste sua liberdade financeira</title>
-  <meta name="description" content="Código da Renda — Estratégias práticas para começar a investir e gerar renda." />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Código da Renda</title>
   <style>
-    :root{
-      --bg1:#071226; --bg2:#072b3a; --accent:#00b4d8; --accent-2:#00e6c3;
-      --card: rgba(255,255,255,0.04); --muted:#9fb0bd; --maxw:1100px;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
     }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Poppins,system-ui,Arial;background:linear-gradient(180deg,var(--bg1),var(--bg2));color:#f3f7f9}
-    .wrap{max-width:var(--maxw);margin:16px auto;padding:16px}
-    header{display:flex;align-items:center;gap:16px;justify-content:space-between;padding:10px 6px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:68px;height:68px;border-radius:12px;background:linear-gradient(135deg,var(--bg2),#0b3a4a);display:flex;align-items:center;justify-content:center;overflow:hidden}
-    .logo img{width:100%;height:100%;object-fit:contain;display:block}
-    .brand h1{margin:0;font-size:18px}
-    .brand p{margin:0;color:var(--muted);font-size:13px}
-    nav a{color:var(--muted);text-decoration:none;margin-left:12px}
-    .hero{display:grid;grid-template-columns:1fr 360px;gap:18px;align-items:start}
-    .hero-left{padding:22px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:14px}
-    .kicker{color:var(--accent);font-weight:600;margin-bottom:8px}
-    .title{font-size:28px;margin:0;color:#e9fbff;line-height:1.05}
-    .lead{color:var(--muted);margin-top:10px;font-size:15px}
-    .cta-row{margin-top:14px;display:flex;gap:12px;flex-wrap:wrap}
-    .btn{background:var(--accent);color:#012226;padding:12px 18px;border-radius:999px;font-weight:700;text-decoration:none;display:inline-block;box-shadow:0 6px 18px rgba(0,180,216,0.12);transition:transform .18s}
-    .btn.secondary{background:transparent;border:2px solid rgba(255,255,255,0.05);color:var(--muted)}
-    .btn:hover{transform:translateY(-4px)}
-    .card{background:var(--card);padding:14px;border-radius:12px;backdrop-filter:blur(6px)}
-    .card h3{margin:0 0 8px 0}
-    .card p{margin:0;color:var(--muted);font-size:14px}
-    .contact-email{display:inline-block;margin-top:10px;padding:10px 12px;border-radius:10px;background:rgba(255,255,255,0.02);color:var(--muted);text-decoration:none}
-    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
-    .tile{border-radius:12px;overflow:hidden;background:linear-gradient(180deg, rgba(0,0,0,0.18), rgba(255,255,255,0.02));min-height:130px;display:flex;flex-direction:column}
-    .tile img{width:100%;height:100%;object-fit:cover;display:block;flex:1}
-    .tile .caption{padding:8px;color:var(--muted);font-size:13px}
-    .invests{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:20px}
-    .invest-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:16px;border-radius:12px}
-    .invest-card h4{margin:0 0 8px 0;color:var(--accent-2)}
-    .muted{color:var(--muted);font-size:14px}
-    footer{margin-top:32px;padding:20px;text-align:center;color:var(--muted)}
-    .socials a{color:var(--muted);text-decoration:none;margin:0 8px}
-    @media(max-width:980px){.hero{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}.invests{grid-template-columns:1fr}nav{display:none}}
-    @media(max-width:520px){.logo{width:56px;height:56px}.title{font-size:22px}.gallery{grid-template-columns:1fr} .hero-left{padding:14px} .card{padding:12px}}
-    .fade{opacity:0;transform:translateY(8px);transition:all .55s ease}
-    .fade.show{opacity:1;transform:none}
-    img {background: linear-gradient(180deg,#0b3a4a,#07343d); min-height:120px}
+
+    body {
+      background-color: #0b132b;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #1c2541;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 3px solid #3a506b;
+    }
+
+    header img {
+      max-width: 140px;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: #5bc0be;
+    }
+
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #5bc0be;
+      margin-bottom: 15px;
+    }
+
+    p {
+      margin-bottom: 20px;
+      color: #d9d9d9;
+    }
+
+    .hero {
+      background: #1c2541;
+      padding: 60px 20px;
+      border-radius: 12px;
+      margin: 30px auto;
+      max-width: 900px;
+    }
+
+    .hero img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: #1c2541;
+      padding: 20px;
+      border-radius: 12px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .cta {
+      background: #5bc0be;
+      color: #0b132b;
+      display: inline-block;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .cta:hover {
+      background: #3aafa9;
+    }
+
+    footer {
+      background: #1c2541;
+      padding: 30px 10px;
+      text-align: center;
+      border-top: 2px solid #3a506b;
+      color: #b0b0b0;
+    }
+
+    footer a {
+      color: #5bc0be;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      section {
+        padding: 25px 15px;
+      }
+
+      .hero {
+        padding: 30px 15px;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <div class="logo"><img src="logo.png" alt="Código da Renda logo"></div>
-        <div>
-          <h1>Código da Renda</h1>
-          <p>Investimentos e rentabilidade com método</p>
-        </div>
+  <header>
+    <img src="https://raw.githubusercontent.com/zellerdias/codigo-da-renda/main/logo.png" alt="Código da Renda Logo">
+    <h1>Conquiste sua Liberdade Financeira</h1>
+  </header>
+
+  <section class="hero">
+    <img src="https://images.unsplash.com/photo-1640622659893-3c707d5a86c3?auto=format&fit=crop&w=1200&q=80" alt="Investimentos">
+    <h2>Descubra estratégias reais para fazer o dinheiro trabalhar por você</h2>
+    <p>Aprenda os fundamentos dos investimentos e dê o primeiro passo rumo à sua independência financeira.</p>
+    <a href="#" class="cta">Quero Aprender Agora</a>
+  </section>
+
+  <section>
+    <h2>💰 5 Formas Reais de Investir e Gerar Renda</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1581092334373-665c99f13af8?auto=format&fit=crop&w=600&q=80" alt="Ações de Dividendos">
+        <h3>Ações de Dividendos</h3>
+        <p>Invista em empresas sólidas que pagam dividendos frequentes e crescem com o tempo.</p>
       </div>
-      <nav>
-        <a href="#formas">5 Formas</a>
-        <a href="#reserva">Reserva</a>
-        <a href="#contact">Contato</a>
-      </nav>
-    </header>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=600&q=80" alt="Fundos Imobiliários">
+        <h3>Fundos Imobiliários (FIIs)</h3>
+        <p>Receba rendimentos mensais com imóveis sem precisar comprar nenhum prédio.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?auto=format&fit=crop&w=600&q=80" alt="CDBs e Tesouro Direto">
+        <h3>CDBs e Tesouro Direto</h3>
+        <p>Investimentos de baixo risco ideais para quem busca segurança e constância.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?auto=format&fit=crop&w=600&q=80" alt="Fundos de Investimento">
+        <h3>Fundos de Investimento</h3>
+        <p>Permita que especialistas administrem seus investimentos de forma estratégica.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437b5?auto=format&fit=crop&w=600&q=80" alt="Criptomoedas">
+        <h3>Criptomoedas</h3>
+        <p>Invista de forma inteligente em um mercado descentralizado e cheio de oportunidades.</p>
+      </div>
+    </div>
+  </section>
 
-    <main>
-      <section class="hero">
-        <div class="hero-left fade" id="hero-left">
-          <div class="kicker">Conquiste sua liberdade</div>
-          <h2 class="title">Transforme conhecimento em renda com investimentos inteligentes</h2>
-          <p class="lead">Aprenda estratégias práticas de investimento para quem está começando — com segurança e disciplina.</p>
-          <div class="cta-row">
-            <a class="btn" id="ctaBuy" href="#">Quero Começar Hoje</a>
-            <a class="btn secondary" href="#formas">Ver 5 Formas</a>
-          </div>
+  <section>
+    <h2>📈 Como Montar sua Reserva de Emergência</h2>
+    <p>Mesmo começando com pouco, é possível criar uma base sólida para investir com segurança. Foque na constância e use investimentos de alta liquidez como CDBs ou Tesouro Selic.</p>
+  </section>
 
-          <div class="gallery" style="margin-top:18px">
-            <div class="tile">
-              <img src="https://images.unsplash.com/photo-1569025690938-a00729c9e3b9?auto=format&fit=crop&w=1200&q=80" alt="gráfico crescente">
-              <div class="caption">Crescimento financeiro começa com disciplina</div>
-            </div>
-            <div class="tile">
-              <img src="https://images.unsplash.com/photo-1599488615730-2d29f3d94f0b?auto=format&fit=crop&w=1200&q=80" alt="investidor confiante">
-              <div class="caption">Estratégias inteligentes para o seu perfil</div>
-            </div>
-            <div class="tile">
-              <img src="https://images.unsplash.com/photo-1641254452507-c097c3a9f82f?auto=format&fit=crop&w=1200&q=80" alt="mulher confiante investindo">
-              <div class="caption">Invista com segurança e método</div>
-            </div>
-          </div>
-        </div>
-
-        <aside class="card fade" id="card-right">
-          <h3>Fale conosco</h3>
-          <p class="muted">Prefere falar por e-mail? Respondo em até 24h</p>
-          <a class="contact-email" href="mailto:codigodarenda0@gmail.com">codigodarenda0@gmail.com</a>
-
-          <div style="margin-top:12px">
-            <strong style="display:block;margin-bottom:6px">Arquivo do Ebook</strong>
-            <p class="muted" style="margin:0 0 10px 0">Suba <code>ebook.pdf</code> no repositório e atualize o botão de compra.</p>
-            <a class="btn" id="downloadEbook" href="ebook.pdf" target="_blank">Baixar Ebook (Exemplo)</a>
-          </div>
-        </aside>
-      </section>
-
-      <section id="formas" class="fade" style="margin-top:22px;padding:0 6px">
-        <h2 style="color:var(--accent);text-align:left">5 Formas Reais de Começar a Investir</h2>
-        <div class="invests" style="margin-top:12px">
-          <div class="invest-card">
-            <img src="https://images.unsplash.com/photo-1569025690938-a00729c9e3b9?auto=format&fit=crop&w=1200&q=80" alt="Tesouro Direto" style="width:100%;border-radius:8px;margin-bottom:10px">
-            <h4>1. Tesouro Direto</h4>
-            <p class="muted">Títulos públicos com baixo risco — ótimo para quem começa e quer previsibilidade.</p>
-          </div>
-          <div class="invest-card">
-            <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?auto=format&fit=crop&w=1200&q=80" alt="Fundos Imobiliários" style="width:100%;border-radius:8px;margin-bottom:10px">
-            <h4>2. Fundos Imobiliários (FIIs)</h4>
-            <p class="muted">Receba rendimentos mensais ligados a imóveis sem comprar um imóvel físico.</p>
-          </div>
-          <div class="invest-card">
-            <img src="https://images.unsplash.com/photo-1599488615730-2d29f3d94f0b?auto=format&fit=crop&w=1200&q=80" alt="Ações de Dividendos" style="width:100%;border-radius:8px;margin-bottom:10px">
-            <h4>3. Ações de Dividendos</h4>
-            <p class="muted">Empresas sólidas que pagam parte dos lucros aos acionistas — renda passiva.</p>
-          </div>
-          <div class="invest-card">
-            <img src="https://images.unsplash.com/photo-1641254452507-c097c3a9f82f?auto=format&fit=crop&w=1200&q=80" alt="CDBs e Renda Fixa" style="width:100%;border-radius:8px;margin-bottom:10px">
-            <h4>4. CDBs e Renda Fixa</h4>
-            <p class="muted">Opções de renda fixa com retorno previsível e proteção do capital.</p>
-          </div>
-          <div class="invest-card">
-            <img src="https://images.unsplash.com/photo-1590608897129-79da98d1596d?auto=format&fit=crop&w=1200&q=80" alt="Fundos de Investimento" style="width:100%;border-radius:8px;margin-bottom:10px">
-            <h4>5. Fundos de Investimento</h4>
-            <p class="muted">Diversificação com gestão profissional — bom para quem prefere não escolher ativos diretamente.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="reserva" class="fade" style="margin-top:28px">
-        <h2 style="color:var(--accent);text-align:left">Reserva de Emergência</h2>
-        <p class="muted" style="max-width:780px">Mesmo com pouco é possível começar: priorize pequenos aportes regulares, automatize transferências e foque em segurança antes de buscar ganhos maiores.</p>
-        <div style="margin-top:14px">
-          <a class="btn" id="ctaReserve" href="#">Quero Começar Hoje</a>
-        </div>
-      </section>
-
-    </main>
-
-    <footer id="contact">
-      <div>© Código da Renda — <span id="year"></span></div>
-      <div style="margin-top:8px" class="socials"><a href="https://www.instagram.com/seuusuario" target="_blank" rel="noopener">Instagram</a> · <a href="mailto:codigodarenda0@gmail.com">Email</a></div>
-    </footer>
-  </div>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    window.addEventListener('load', () => {
-      document.querySelectorAll('.fade').forEach((el, i) => {
-        setTimeout(()=> el.classList.add('show'), 120 * i);
-      });
-    });
-    const PAYMENT_LINK = '#';
-    document.getElementById('ctaBuy').setAttribute('href', PAYMENT_LINK);
-    document.getElementById('ctaReserve').setAttribute('href', PAYMENT_LINK);
-  </script>
+  <footer>
+    <p>Entre em contato: <a href="mailto:codigodarenda0@gmail.com">codigodarenda0@gmail.com</a></p>
+    <p>© 2025 Código da Renda. Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
