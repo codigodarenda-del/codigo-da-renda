@@ -1,104 +1,206 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Código da Renda</title>
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            background: linear-gradient(180deg, #0a0a0a, #111827);
-            color: #f1f1f1;
-        }
-        header {
-            text-align: center;
-            padding: 80px 20px;
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-        }
-        header h1 {
-            font-size: 3em;
-            color: #00b4d8;
-        }
-        header p {
-            color: #e2e8f0;
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
-        section {
-            padding: 60px 20px;
-            text-align: center;
-            max-width: 900px;
-            margin: auto;
-        }
-        h2 {
-            color: #00b4d8;
-            margin-bottom: 20px;
-        }
-        .formas {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .forma {
-            background: #1e293b;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-        }
-        button {
-            background: #00b4d8;
-            border: none;
-            padding: 15px 30px;
-            border-radius: 8px;
-            color: #fff;
-            font-size: 1.1em;
-            cursor: pointer;
-            margin-top: 20px;
-            transition: 0.3s;
-        }
-        button:hover {
-            background: #0096c7;
-        }
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            background: #0f172a;
-            color: #94a3b8;
-        }
-        a {
-            color: #00b4d8;
-            text-decoration: none;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Código da Renda | Liberdade Financeira</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(180deg, #0d1b2a, #00b4d8, #f8f9fa);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 10px;
+      background: rgba(0,0,0,0.3);
+    }
+
+    header img {
+      width: 160px;
+      height: auto;
+      margin-bottom: 15px;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      color: #00b4d8;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #cdeaf7;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      backdrop-filter: blur(5px);
+    }
+
+    h2 {
+      color: #fff;
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #f1f1f1;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 25px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 15px;
+      overflow: hidden;
+      text-align: center;
+      padding-bottom: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 15px 0 10px;
+      color: #00b4d8;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #e9faff;
+      padding: 0 15px;
+    }
+
+    .cta {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .cta a {
+      background-color: #00b4d8;
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta a:hover {
+      background-color: #0090b0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: #cdeaf7;
+      background: rgba(0,0,0,0.3);
+    }
+
+    footer a {
+      color: #00b4d8;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      section {
+        margin: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Conquiste Sua Liberdade Financeira</h1>
-        <p>Descubra estratégias práticas para ganhar sua primeira renda online e multiplicar seu dinheiro de forma inteligente.</p>
-    </header>
 
-    <section>
-        <h2>5 Formas Reais de Ganhar Sua Primeira Renda Online</h2>
-        <div class="formas">
-            <div class="forma"><h3>1. Freelancer Digital</h3><p>Use suas habilidades e trabalhe de qualquer lugar do mundo.</p></div>
-            <div class="forma"><h3>2. Afiliado de Produtos</h3><p>Venda produtos e ganhe comissões automáticas.</p></div>
-            <div class="forma"><h3>3. Criação de E-books</h3><p>Transforme conhecimento em renda com produtos digitais.</p></div>
-            <div class="forma"><h3>4. Investimentos Simples</h3><p>Aprenda a fazer o dinheiro trabalhar para você.</p></div>
-            <div class="forma"><h3>5. Marketing de Conteúdo</h3><p>Construa audiência e gere renda recorrente.</p></div>
-        </div>
-        <button>Quero aprender a aplicar isso!</button>
-    </section>
+  <header>
+    <img src="logo.png" alt="Código da Renda Logo">
+    <h1>Conquiste Sua Liberdade Financeira</h1>
+    <p>Descubra estratégias inteligentes para investir e multiplicar seu dinheiro.</p>
+  </header>
 
-    <section>
-        <h2>Como Criar uma Reserva de Emergência Mesmo Ganhando Pouco</h2>
-        <p>Com organização e disciplina, é possível construir segurança financeira. Pequenos passos hoje garantem tranquilidade amanhã.</p>
-        <button>Descubra como começar!</button>
-    </section>
+  <section>
+    <h2>💰 5 Formas Reais de Começar a Investir e Gerar Sua Primeira Renda</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d" alt="Tesouro Direto">
+        <h3>Tesouro Direto</h3>
+        <p>Comece com segurança, rendendo acima da poupança e ideal para iniciantes.</p>
+      </div>
 
-    <footer>
-        <p>Entre em contato: <a href="mailto:codigodarenda0@gmail.com">codigodarenda0@gmail.com</a></p>
-        <p>© Código da Renda 2025. Todos os direitos reservados.</p>
-    </footer>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1565514020171-6b5ef85519a0" alt="Fundos Imobiliários">
+        <h3>Fundos Imobiliários (FIIs)</h3>
+        <p>Ganhe rendimentos mensais com imóveis sem precisar comprar um.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1542223616-ef5c3e9f3d77" alt="Ações de Dividendos">
+        <h3>Ações de Dividendos</h3>
+        <p>Empresas sólidas que dividem parte do lucro diretamente com você.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a" alt="CDBs e Renda Fixa">
+        <h3>CDBs e Renda Fixa</h3>
+        <p>Invista com baixo risco e ganhos previsíveis — ótimo para começar.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1581093588401-22e8c6c0a9c0" alt="Fundos de Investimento">
+        <h3>Fundos de Investimento</h3>
+        <p>Deixe gestores profissionais cuidarem dos seus investimentos por você.</p>
+      </div>
+    </div>
+
+    <div class="cta">
+      <a href="#" target="_blank">Quero Começar Hoje</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>💡 Como Montar Sua Reserva de Emergência Mesmo Ganhando Pouco</h2>
+    <p>Montar uma reserva é o primeiro passo pra investir com segurança. Mesmo com pouco, dá pra começar com disciplina e metas realistas. Assim, você cria base sólida antes de buscar lucros maiores.</p>
+  </section>
+
+  <footer>
+    <p>📩 Contato: <a href="mailto:codigodarenda0@gmail.com">codigodarenda0@gmail.com</a></p>
+    <p>© 2025 Código da Renda — Todos os direitos reservados.</p>
+  </footer>
+
 </body>
 </html>
